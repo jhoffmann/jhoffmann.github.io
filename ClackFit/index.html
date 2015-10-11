@@ -34,10 +34,19 @@
 
   <body>
     <div class="reveal">
+      <div class="day"></div>
+      <div id="dayBig"></div>
+      <div id="clock"></div>
       <div class="slides" id="slideContainer">
+        <section data-day="">
+          <h1>ClackFit</h1>
+          <blockquote>&ldquo;No great thing is created suddenly.&rdquo;<br>Epictetus 135 AD</blockquote>
+          <blockquote>&ldquo;I feel good, I feel great, I feel wonderful... I feel good, I feel great, I feel wonderful...&rdquo;<br>Bob Wiley 1991 AD</blockquote>
+        </section>
       </div>
     </div>
 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script src="lib/js/head.min.js"></script>
     <script src="js/reveal.js"></script>
 
@@ -57,7 +66,6 @@
 
       function loadSections(data) {
         data.forEach(renderDay);
-        Reveal.slide(0, 0, 0);
       }
 
       function renderDay(data, index, array) {
@@ -78,7 +86,7 @@
           }
         }
         while (setArray.length) {
-          out += '<section><h1 class="day">'+data.Day+'</h1>'+setArray.splice(0, 6).join('')+'</section>';
+          out += '<section data-day="'+data.Day+'">'+setArray.splice(0, 5).join('')+'</section>';
         }
         container.innerHTML += '<section>' + out + '</section>';
       }
@@ -106,15 +114,21 @@
         touch: true,
         hideAddressBar: true,
 
-        transition: 'fade', // none/fade/slide/convex/concave/zoom
+        transition: 'slide', // none/fade/slide/convex/concave/zoom
 
         // Optional reveal.js plugins
         dependencies: [
           { src: 'js/tabletop.js', callback: loadData, async: false },
           { src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
           { src: 'plugin/highlight/highlight.js', async: true, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
-          { src: 'plugin/zoom-js/zoom.js', async: true }
+          { src: 'plugin/zoom-js/zoom.js', async: true },
+          { src: 'js/jqClock.min.js', callback: function() { $("div#clock").clock({"calendar":"false","seconds":"false"}); } }
         ]
+      });
+
+      Reveal.addEventListener('slidechanged', function(event) {
+        $('.day').html('<h2>'+$(event.currentSlide).data('day')+'</h2>');
+        // event.previousSlide, event.currentSlide, event.indexh, event.indexv
       });
     </script>
   </body>

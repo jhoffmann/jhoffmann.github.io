@@ -13,7 +13,7 @@
 
     <link rel="stylesheet" href="css/clackfit.css">
     <link rel="stylesheet" href="css/reveal.css">
-    <link rel="stylesheet" href="css/theme/black.css" id="theme">
+    <link rel="stylesheet" href="css/theme/night.css" id="theme">
 
     <!-- Code syntax highlighting -->
     <link rel="stylesheet" href="lib/css/zenburn.css">
@@ -78,7 +78,7 @@
           }
         }
         while (setArray.length) {
-          out += '<section><h1 class="day">'+data.Day+'</h1>'+setArray.splice(0, 4).join('')+'</section>';
+          out += '<section><h1 class="day">'+data.Day+'</h1>'+setArray.splice(0, 6).join('')+'</section>';
         }
         container.innerHTML += '<section>' + out + '</section>';
       }
@@ -102,7 +102,7 @@
         controls: true,
         progress: false,
         history: true,
-        center: true,
+        center: false,
         touch: true,
         hideAddressBar: true,
 

@@ -34,8 +34,7 @@
 
   <body>
     <div class="reveal">
-      <div class="day"></div>
-      <div id="dayBig"></div>
+      <div id="day"></div>
       <div id="clock"></div>
       <div class="slides" id="slideContainer">
         <section data-day="">
@@ -122,13 +121,12 @@
           { src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
           { src: 'plugin/highlight/highlight.js', async: true, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
           { src: 'plugin/zoom-js/zoom.js', async: true },
-          { src: 'js/jqClock.min.js', callback: function() { $("div#clock").clock({"calendar":"false","seconds":"false"}); } }
+          { src: 'js/jqClock.min.js', callback: function() { $("div#clock").clock({"calendar":"false", "seconds":"false"}); } }
         ]
       });
 
       Reveal.addEventListener('slidechanged', function(event) {
-        $('.day').html('<h2>'+$(event.currentSlide).data('day')+'</h2>');
-        // event.previousSlide, event.currentSlide, event.indexh, event.indexv
+        $('#day').html('<h2>'+$(event.currentSlide).data('day')+'</h2>');
       });
     </script>
   </body>

@@ -1,9 +1,9 @@
-div.day {
+div#day {
 	position:fixed; top:2%; right:2%;
 	z-index: -1000;
 }
 
-div.day h2 {
+div#day h2 {
 	text-transform: uppercase;
 	color: rgba(255, 0, 0, 0.6);
 }

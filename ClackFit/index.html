@@ -64,6 +64,7 @@
       }
 
       function loadSections(data) {
+        // console.log(data);
         data.forEach(renderDay);
       }
 
@@ -77,6 +78,7 @@
           if (data.hasOwnProperty(key)) {
             splitSet = data[key].split("\n");
             reps     = (isNaN(splitSet[0]) ? '' : splitSet.shift());
+            if (!splitSet.length) continue;
             if (splitSet.length > 1) {
              setArray.push(this.renderSuperSet(splitSet, reps));
             } else {
@@ -85,7 +87,7 @@
           }
         }
         while (setArray.length) {
-          out += '<section data-day="'+data.Day+'">'+setArray.splice(0, 5).join('')+'</section>';
+          out += '<section data-day="'+data.Day+'">'+setArray.splice(0, 4).join('')+'</section>';
         }
         container.innerHTML += '<section>' + out + '</section>';
       }

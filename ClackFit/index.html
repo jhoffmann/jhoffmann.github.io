@@ -69,10 +69,11 @@
           if (key == 'Day') { continue; }
           if (data.hasOwnProperty(key)) {
             splitSet = data[key].split("\n");
-            if (splitSet.length > 2) {
-             setArray.push(this.renderSuperSet(splitSet, key));
+            reps     = (isNaN(splitSet[0]) ? '' : splitSet.shift());
+            if (splitSet.length > 1) {
+             setArray.push(this.renderSuperSet(splitSet, reps));
             } else {
-             setArray.push(this.renderSet(splitSet, key));
+             setArray.push(this.renderSet(splitSet, reps));
             }
           }
         }
@@ -82,15 +83,11 @@
         container.innerHTML += '<section>' + out + '</section>';
       }
 
-      function renderSet(data, key) {
-        reps     = (isNaN(data[0]) ? '' : data[0]);
-        exercise = (isNaN(data[0]) ? data[0] : data[1]);
-        return '<p class="set"><i>'+reps+'</i>'+exercise+'</p>';
+      function renderSet(data, reps) {
+        return '<p class="set"><i>'+reps+'</i>'+data[0]+'</p>';
       }
 
-      function renderSuperSet(data, key) {
-        reps     = (isNaN(data[0]) ? '' : data.shift());
-
+      function renderSuperSet(data, reps) {
         superSet =  '<ul class="super"><i>'+reps+'</i>';
         data.forEach(function(exercise) {
           superSet += '<li>'+exercise+'</li>';

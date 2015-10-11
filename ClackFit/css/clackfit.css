@@ -18,7 +18,7 @@
 	font-size: 2em;
 	font-weight: bolder;
 	font-style: normal;
-	line-height: 0.8em;
+	line-height: 0.7em;
 	text-align: right;
     color: rgba(0, 255, 151, 0.64);
 }
@@ -30,5 +30,5 @@
 	margin-left: 2em;
 	font-size: 1.4em;
 	letter-spacing: 0.1em;
-	border-bottom: white 2px solid;
+	border-bottom: #808080 2px solid;
 }

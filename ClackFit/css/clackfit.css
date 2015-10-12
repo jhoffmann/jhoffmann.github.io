@@ -46,5 +46,5 @@ div#clock {
 	margin: 0.2em 0 0.2em 1.4em;
 	font-size: 1.5em;
 	letter-spacing: 0.1em;
-	border-bottom: #808080 2px solid;
+	border-bottom: rgba(200, 200, 200, 0.3) 0.1em solid;
 }

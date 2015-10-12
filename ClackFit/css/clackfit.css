@@ -43,8 +43,8 @@ div#clock {
 	text-transform: uppercase;
 	text-align: left;
 	display: block;
-	margin: 0.2em 0.2em 0.2em 1.7em;
-	font-size: 1.9em;
+	margin: 0.2em 0 0.2em 1.4em;
+	font-size: 1.8em;
 	letter-spacing: 0.1em;
 	border-bottom: #808080 2px solid;
 }

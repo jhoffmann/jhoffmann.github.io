@@ -1,50 +1,37 @@
 div#day {
-	position:fixed; top:2%; right:2%;
-	z-index: -1000;
-	text-align: right;
+    position:fixed; top:2%; right:2%;
+    z-index: -1000;
+    text-align: right;
 }
 
 div#day h2 {
-	text-transform: uppercase;
-	color: rgba(255, 0, 0, 0.6);
+    text-transform: uppercase;
+    color: rgba(255, 0, 0, 0.6);
 }
 
 div#day h1 {
-	font-size: 16em;
-	color: rgba(200, 200, 200, 0.1);
+    font-size: 16em;
+    color: rgba(200, 200, 200, 0.1);
 }
 
-div#clock {
-	position:fixed; bottom:1%; left:1%;
-	z-index: -1000;
-	color: rgba(255, 255, 255, 0.6);
-	text-transform: uppercase;
-	font-size: 1.6em;
-}
-.reveal ul.super {
-	list-style-type: none;
-	margin: 0;
+.set i {
+    font-size: 1.5em;
+    font-weight: bolder;
+    font-style: normal;
+    line-height: 1em;
+    padding-right: 0.2em;
+    vertical-align: text-bottom;
+    color: rgba(0, 255, 151, 1);
 }
 
-.set i, .super i {
-	float: left;
-	position: fixed;
-	left: 0;
-	font-size: 1.5em;
-	font-weight: bolder;
-	font-style: normal;
-	line-height: 0.8em;
-	text-align: right;
-    color: rgba(0, 255, 151, 0.64);
-}
-
-.reveal p.set, .reveal ul.super {
-	padding-bottom: 10px;
-	text-transform: uppercase;
-	text-align: left;
-	display: block;
-	margin: 0.2em 0 0.2em 1.4em;
-	font-size: 1.5em;
-	letter-spacing: 0.1em;
-	border-bottom: rgba(200, 200, 200, 0.3) 0.1em solid;
+.reveal p.set {
+    padding-bottom: 0.2em;
+    text-transform: uppercase;
+    text-align: left;
+    display: block;
+    margin: 0.1em 0 0.2em 0;
+    font-size: 1.7em;
+    font-weight: bold;
+    letter-spacing: 0.1em;
+    border-bottom: rgba(200, 200, 200, 0.3) 0.1em solid;
 }

@@ -35,7 +35,6 @@
   <body>
     <div class="reveal">
       <div id="day"></div>
-      <div id="clock"></div>
       <div class="slides" id="slideContainer">
         <section data-day="">
           <h1>ClackFit</h1>
@@ -87,7 +86,7 @@
           }
         }
         while (setArray.length) {
-          out += '<section data-day="'+data.Day+'">'+setArray.splice(0, 5).join('')+'</section>';
+          out += '<section data-day="'+data.Day+'">'+setArray.splice(0, 7).join('')+'</section>';
         }
         container.innerHTML += '<section>' + out + '</section>';
       }
@@ -97,11 +96,12 @@
       }
 
       function renderSuperSet(data, reps) {
-        superSet =  '<ul class="super"><i>'+reps+'</i>';
+        superSet = '<p class="set"><i>'+reps+'</i>';
         data.forEach(function(exercise) {
-          superSet += '<li>'+exercise+'</li>';
+          if (exercise.length)
+            superSet += exercise + ', ';
         });
-        superSet += '</ul>';
+        superSet = superSet.substr(0, superSet.length - 2) + '</p>'
         return superSet;
       }
 
@@ -116,8 +116,8 @@
         hideAddressBar: true,
         overview: false,
 
-        // width: "90%",
-        // height: "90%",
+        width: "95%",
+        height: "95%",
         // margin: 0.2,
 
         transition: 'slide', // none/fade/slide/convex/concave/zoom
@@ -127,8 +127,7 @@
           { src: 'js/tabletop.js', callback: loadData, async: false },
           { src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
           { src: 'plugin/highlight/highlight.js', async: true, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
-          { src: 'plugin/zoom-js/zoom.js', async: true },
-          { src: 'js/jqClock.min.js', callback: function() { $("div#clock").clock({"calendar":"false", "seconds":"false"}); } }
+          { src: 'plugin/zoom-js/zoom.js', async: true }
         ]
       });
 

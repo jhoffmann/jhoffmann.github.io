@@ -35,6 +35,7 @@
   <body>
     <div class="reveal">
       <div id="day"></div>
+      <div id="logo"></div>
       <div class="slides" id="slideContainer">
         <section data-day="">
           <h1>ClackFit</h1>
@@ -86,7 +87,7 @@
           }
         }
         while (setArray.length) {
-          out += '<section data-day="'+data.Day+'">'+setArray.splice(0, 7).join('')+'</section>';
+          out += '<section data-day="'+data.Day+'">'+setArray.splice(0, 6).join('')+'</section>';
         }
         container.innerHTML += '<section>' + out + '</section>';
       }
@@ -109,11 +110,9 @@
       // https://github.com/hakimel/reveal.js#configuration
       Reveal.initialize({
         controls: true,
-        progress: true,
+        progress: false,
         history: true,
         center: true,
-        touch: true,
-        hideAddressBar: true,
         overview: false,
 
         width: "95%",
@@ -133,7 +132,7 @@
 
       Reveal.addEventListener('slidechanged', function(event) {
         day = $(event.currentSlide).data('day');
-        $('#day').html('<h2>'+day+'</h2><h1>'+day+'</h1>');
+        $('#day').html('<h2>'+day+'</h2>');
       });
     </script>
   </body>

@@ -77,7 +77,7 @@
           if (key == 'Day') { continue; }
           if (data.hasOwnProperty(key)) {
             splitSet = data[key].split("\n");
-            reps     = (isNaN(splitSet[0]) ? '' : splitSet.shift());
+            reps     = (isNaN(splitSet[0]) ? '1' : splitSet.shift());
             if (!splitSet.length) continue;
             if (splitSet.length > 1) {
              setArray.push(this.renderSuperSet(splitSet, reps));
@@ -132,7 +132,7 @@
 
       Reveal.addEventListener('slidechanged', function(event) {
         day = $(event.currentSlide).data('day');
-        $('#day').html('<h2>'+day+'</h2>');
+        $('#day').html('<h2>'+day+'</h2><h1>'+day+'</h1>');
       });
     </script>
   </body>

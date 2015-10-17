@@ -1,39 +1,48 @@
 div#day {
     position:fixed; top:2%; right:2%;
     z-index: -1000;
-    text-align: right;
+    width: 80%;
 }
 
 div#day h2 {
     text-transform: uppercase;
     color: rgba(255, 0, 0, 0.6);
+    text-align: right;
+}
+
+div#day h1 {
+    text-transform: uppercase;
+    font-size: 12em;
+    z-index: -9988;
+    color: #ffffff;
+    opacity: 0.25;
+    text-align: left;
 }
 
 div#logo {
     background: #111 url('greyCFbullet.png') no-repeat right bottom !important;
-    width: 110%;
-    height: 110%;
-    opacity: 0.1;
+    width: 105%;
+    height: 105%;
+    opacity: 0.25;
     z-index: -9999;
 }
 
 .set i {
     font-weight: bolder;
     font-style: normal;
-    font-size: 0.8em;
-    padding-right: 0.2em;
-    vertical-align: text-top;
-    color: rgba(0, 255, 151, 1);
+    padding-right: 0.5em;
+    /*color: rgba(0, 255, 151, 1);*/
+    color: rgba(255, 98, 195, 1);
 }
 
 .reveal p.set {
+    font-weight: bold;
+    font-size: 1.9em;
+    margin: 0.1em 0 0.2em 0;
     padding-bottom: 0.2em;
     text-transform: uppercase;
     text-align: left;
     display: block;
-    margin: 0.1em 0 0.2em 0;
-    font-size: 2.1em;
-    font-weight: bold;
     letter-spacing: 0.1em;
     border-bottom: rgba(200, 200, 200, 0.3) 0.1em solid;
 }

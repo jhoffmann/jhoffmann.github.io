@@ -12,18 +12,19 @@ div#day h2 {
 
 div#day h1 {
     text-transform: uppercase;
-    font-size: 12em;
+    font-size: 15em;
     z-index: -9988;
     color: #ffffff;
-    opacity: 0.25;
+    opacity: 0.15;
     text-align: left;
+    white-space: nowrap;
 }
 
 div#logo {
     background: #111 url('greyCFbullet.png') no-repeat right bottom !important;
-    width: 105%;
-    height: 105%;
-    opacity: 0.25;
+    width: 104%;
+    height: 104%;
+    opacity: 0.20;
     z-index: -9999;
 }
 
@@ -31,8 +32,8 @@ div#logo {
     font-weight: bolder;
     font-style: normal;
     padding-right: 0.5em;
-    /*color: rgba(0, 255, 151, 1);*/
-    color: rgba(255, 98, 195, 1);
+    color: rgba(0, 255, 151, 1);
+    /*color: rgba(255, 98, 195, 1);*/
 }
 
 .reveal p.set {

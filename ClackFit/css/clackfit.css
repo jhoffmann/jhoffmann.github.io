@@ -23,10 +23,8 @@ div#day h1 {
 
 div#logo {
     background: #111 url('greyCFbullet.png') no-repeat right bottom !important;
-    width: 130%;
-    height: 130%;
-    width: 90%;
-    height: 90%;
+    width: 106%;
+    height: 106%;
     opacity: 0.20;
     z-index: -9999;
 }

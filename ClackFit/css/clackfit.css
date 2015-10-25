@@ -6,7 +6,8 @@ div#day {
 
 div#day h2 {
     text-transform: uppercase;
-    color: rgba(255, 0, 0, 0.6);
+    color: #ffffff;
+    opacity: 0.5;
     text-align: right;
 }
 
@@ -22,8 +23,10 @@ div#day h1 {
 
 div#logo {
     background: #111 url('greyCFbullet.png') no-repeat right bottom !important;
-    width: 104%;
-    height: 104%;
+    width: 130%;
+    height: 130%;
+    width: 90%;
+    height: 90%;
     opacity: 0.20;
     z-index: -9999;
 }

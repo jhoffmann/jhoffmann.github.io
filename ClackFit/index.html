@@ -77,7 +77,7 @@
           if (key == 'Day') { continue; }
           if (data.hasOwnProperty(key)) {
             splitSet = data[key].split("\n");
-            reps     = (isNaN(splitSet[0]) ? '1' : splitSet.shift());
+            reps     = (isNaN(splitSet[0]) ? '' : splitSet.shift());
             if (!splitSet.length) continue;
             if (splitSet.length > 1) {
              setArray.push(this.renderSuperSet(splitSet, reps));
@@ -93,11 +93,17 @@
       }
 
       function renderSet(data, reps) {
-        return '<p class="set"><i>'+reps+'</i>'+data[0]+'</p>';
+        set = '<p class="set">'
+        if (reps > 0)
+          set += '<i>'+reps+'</i>';
+        set += data[0]+'</p>';
+        return set;
       }
 
       function renderSuperSet(data, reps) {
-        superSet = '<p class="set"><i>'+reps+'</i>';
+        superSet = '<p class="set">';
+        if (reps > 0)
+          superSet += '<i>'+reps+'</i>';
         data.forEach(function(exercise) {
           if (exercise.length)
             superSet += exercise + ', ';
